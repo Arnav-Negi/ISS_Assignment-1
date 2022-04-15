@@ -1,6 +1,7 @@
 #!/bin/bash
 
-array=(21 22 34 1 7 90 101 2 4 8 45)
+IFS=','
+read -a array
 tmp=0
 srtd=0
 while [[ $srtd -ne 1 ]]
