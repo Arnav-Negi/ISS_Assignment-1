@@ -6,9 +6,15 @@ for (( i=strlen-1; i>=0; i-- ))
 do
     reverse=$reverse${string:$i:1}
 done
+echo $reverse
+
+for (( i=strlen-1; i>=0; i-- ))
+do
+    reverse2=$reverse2${string:$i:1}
+done
 for (( i=0; i<strlen; i++ ))
 do
-    y=${reverse:$i:1}
+    y=${reverse2:$i:1}
     case $y in
       z)
         y='a'
@@ -24,3 +30,14 @@ do
     answer=$answer$y
 done
 echo $answer
+
+let k=$strlen/2
+for (( i=k-1; i>=0; i-- ))
+do
+    reverse3=$reverse3${string:$i:1}
+done
+for (( i=k; i<strlen; i++ ))
+do 
+    reverse3=$reverse3${string:$i:1}
+done
+echo $reverse3
